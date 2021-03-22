@@ -1,0 +1,81 @@
+%button {
+  height: 40px;
+  cursor: pointer;
+  background-color: black;
+  border: none;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  transition: opacity 0.2s linear;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+%button-white {
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+  transition: opacity 0.2s linear;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+%promotion-texts {
+  display: flex;
+  flex-direction: column;
+  height: 45vh;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  p {
+    line-height: 1.7;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .button {
+      @extend %button;
+      width: 115px;
+      &:last-child {
+        margin-left: 10px;
+      }
+    }
+    .large-button {
+      @extend %button;
+      width: 200px;
+    }
+  }
+}
+
+%sub-header {
+  display: block;
+  width: 100%;
+  font-size: 22px;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
